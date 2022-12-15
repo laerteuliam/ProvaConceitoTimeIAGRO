@@ -21,7 +21,7 @@ namespace IAGRO.Challenge.Api.Controllers
         public async Task<IActionResult> Get([FromQuery] BookQuery bookQuery)
         {
             var bookQueryResult = await _mediator.Send(bookQuery);
-            return (bookQueryResult.Books!=null ? Ok(bookQueryResult.Books): NotFound()) ;
+            return Ok(bookQueryResult.Books);
         }
     }
 }

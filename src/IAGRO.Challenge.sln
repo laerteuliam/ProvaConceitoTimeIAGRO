@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAGRO.Challenge.Api", "IAGRO.Challenge.Api\IAGRO.Challenge.Api.csproj", "{8A73C187-22FE-4516-B66A-568DE4FA360F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAGRO.Challenge.Domain.Catalog", "IAGRO.Challenge.Domain.Catalog\IAGRO.Challenge.Domain.Catalog.csproj", "{04606C59-9833-4852-B692-A57862D2C026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAGRO.Challenge.Domain", "IAGRO.Challenge.Domain.Catalog\IAGRO.Challenge.Domain.csproj", "{04606C59-9833-4852-B692-A57862D2C026}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAGRO.Challenge.Database", "IAGRO.Challenge.Infra.Database\IAGRO.Challenge.Database.csproj", "{A1129356-AD9A-427E-A819-C9AF731B2B02}"
 EndProject
