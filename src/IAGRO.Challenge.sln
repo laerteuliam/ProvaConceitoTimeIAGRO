@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAGRO.Challenge.Domain", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAGRO.Challenge.Database", "IAGRO.Challenge.Infra.Database\IAGRO.Challenge.Database.csproj", "{A1129356-AD9A-427E-A819-C9AF731B2B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAGRO.Challenge.Domain.Shipping", "IAGRO.Challenge.Domain.Shipping\IAGRO.Challenge.Domain.Shipping.csproj", "{D99FC038-1C7B-4E0C-9152-08D4B2469DF1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A1129356-AD9A-427E-A819-C9AF731B2B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1129356-AD9A-427E-A819-C9AF731B2B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1129356-AD9A-427E-A819-C9AF731B2B02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D99FC038-1C7B-4E0C-9152-08D4B2469DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D99FC038-1C7B-4E0C-9152-08D4B2469DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D99FC038-1C7B-4E0C-9152-08D4B2469DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D99FC038-1C7B-4E0C-9152-08D4B2469DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
