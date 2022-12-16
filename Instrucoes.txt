@@ -1,0 +1,7 @@
+Rodar os comandos na sequência abaixo:
+
+1) docker build --rm -t iagro-challenge-api:latest .
+
+2) docker run --rm  -p 8080:80 iagro-challenge-api
+
+3) Acessar url: http://localhost:8080/swagger/index.html
