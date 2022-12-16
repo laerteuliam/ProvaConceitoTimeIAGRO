@@ -9,22 +9,14 @@ namespace IAGRO.Challenge.Database.Catalog
     public class BookRepository : IBookRepository
     {
         private readonly IDataSource dataSource;
-        private readonly JsonSerializerOptions options;
-
+        
         public BookRepository(IDataSource dataSource)
         {
             this.dataSource = dataSource;
-            
-            this.options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
-            options.Converters.Add(new CustomDateTimeConverter("MMMM dd, yyyy"));
-
         }
-        public Book[] Get() => JsonSerializer.Deserialize<Book[]>(dataSource.JsonData,options);
-        public Book GetById(int id) => JsonSerializer.Deserialize<Book[]>(dataSource.JsonData, options).FirstOrDefault(b => b.Id == id);
+
+        public Book[] Get() => dataSource.JsonToObject<Book[]>();
+        public Book GetById(int id) => dataSource.JsonToObject<Book[]>().FirstOrDefault(b => b.Id == id);
         
     }
 }

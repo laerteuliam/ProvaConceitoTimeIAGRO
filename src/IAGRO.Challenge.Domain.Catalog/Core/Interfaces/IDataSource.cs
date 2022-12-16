@@ -8,6 +8,6 @@ namespace IAGRO.Challenge.Domain.Core.Interfaces
 {
     public interface IDataSource
     {
-        public string JsonData { get; }
+        public T JsonToObject<T>();
     }
 }
