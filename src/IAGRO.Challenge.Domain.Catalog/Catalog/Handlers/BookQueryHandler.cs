@@ -4,7 +4,7 @@ using MediatR;
 
 namespace IAGRO.Challenge.Domain.Catalog.Handlers
 {
-    public class BookQuery : IRequest<BookQueryResult>
+    public class BookQueryRequest : IRequest<BookQueryResult>
     {
         public string? Author { get; set; }
         public string? Name { get; set; }
@@ -23,7 +23,7 @@ namespace IAGRO.Challenge.Domain.Catalog.Handlers
     }
 
 
-    public class BookQueryHandler : IRequestHandler<BookQuery, BookQueryResult>
+    public class BookQueryHandler : IRequestHandler<BookQueryRequest, BookQueryResult>
     {
         private readonly IBookRepository bookRepository;
 
@@ -32,7 +32,7 @@ namespace IAGRO.Challenge.Domain.Catalog.Handlers
             this.bookRepository = bookRepository;
         }
 
-        public async Task<BookQueryResult> Handle(BookQuery request, CancellationToken cancellationToken)
+        public async Task<BookQueryResult> Handle(BookQueryRequest request, CancellationToken cancellationToken)
         {
             var books = bookRepository.Get();
 

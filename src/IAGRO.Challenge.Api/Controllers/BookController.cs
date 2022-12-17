@@ -9,16 +9,14 @@ namespace IAGRO.Challenge.Api.Controllers
     public class BookController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly ILogger<BookController> _logger;
-
-        public BookController(ILogger<BookController> logger, IMediator mediator)
+        
+        public BookController(IMediator mediator)
         {
-            _logger = logger;
             _mediator = mediator;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] BookQuery bookQuery)
+        public async Task<IActionResult> Get([FromQuery] BookQueryRequest bookQuery)
         {
             var bookQueryResult = await _mediator.Send(bookQuery);
             return Ok(bookQueryResult.Books);

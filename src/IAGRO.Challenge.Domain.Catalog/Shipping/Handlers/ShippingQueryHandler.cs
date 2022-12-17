@@ -2,7 +2,7 @@
 using MediatR;
 namespace IAGRO.Challenge.Domain.Shipping.Handlers
 {
-    public class ShippingQueryHandler : IRequestHandler<ShippingQuery, ShippingQueryResult>
+    public class ShippingQueryHandler : IRequestHandler<ShippingQueryRequest, ShippingQueryResult>
     {
         private readonly IBookRepository bookRepository;
 
@@ -12,7 +12,7 @@ namespace IAGRO.Challenge.Domain.Shipping.Handlers
         }
 
 
-        public async Task<ShippingQueryResult> Handle(ShippingQuery request, CancellationToken cancellationToken)
+        public async Task<ShippingQueryResult> Handle(ShippingQueryRequest request, CancellationToken cancellationToken)
         {
             var book = this.bookRepository.GetById(request.BookId);
             decimal shippingValue = 0;
@@ -38,7 +38,7 @@ namespace IAGRO.Challenge.Domain.Shipping.Handlers
         
     }
 
-    public class ShippingQuery : IRequest<ShippingQueryResult>
+    public class ShippingQueryRequest : IRequest<ShippingQueryResult>
     {
         public int BookId { get; set; }
     }
