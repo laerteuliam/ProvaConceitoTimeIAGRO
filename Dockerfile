@@ -7,6 +7,7 @@ EXPOSE 80
 COPY . .
 
 RUN dotnet restore "./src/IAGRO.Challenge.sln" --disable-parallel
+RUN dotnet test "./tests/IAGRO.Challenge.Api.Tests"
 RUN dotnet publish "./src/IAGRO.Challenge.sln" -c release -o /app --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal
